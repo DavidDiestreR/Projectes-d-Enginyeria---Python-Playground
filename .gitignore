@@ -1,0 +1,63 @@
+# ===============================
+# Git ignore
+# ===============================
+#
+# Objetivo:
+# - Guardar TODOS los datos del proyecto por defecto (incluyendo data/ y outputs).
+# - No versionar los pesos/checkpoints en saved_models/ (solo .gitkeep como marcador).
+# - Ignorar artefactos temporales de Python/Jupyter, entornos, ficheros de editor/SO y builds.
+#
+# --- Python / general ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+*.py.rej
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Entornos / paquetes ---
+.venv/
+venv/
+env/
+envs/
+.env
+.conda/
+conda-meta/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+
+# --- Editores / SO ---
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# --- Build / distribución ---
+build/
+dist/
+
+# --- Tests / cobertura / tmp ---
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+*.tmp
+*.cache/
+.cache/
+
+# --- ML / tracking típicos ---
+wandb/
+mlruns/
+runs/
+tensorboard/
+.checkpoints/
+
+# --- Whitelists útiles ---
+# Asegura que los environment.yml se versionan siempre, incluso si una regla general los afectara.
+!**/environment.yml
