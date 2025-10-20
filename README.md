@@ -62,3 +62,11 @@ jupyter kernelspec list
 jupyter kernelspec uninstall myenv -y
 ```
 
+### Haz tu primer git add -> git commit -> git push
+Dentro del proyecto, solo una vez:
+```bash
+git config user.name "Usuario_Github"
+git config user.email "correo_usuario_github@empresa.com"
+```
+
+Create una rama nueva desde Github y usando los comandos del documento de drive colocate en la rama y haz el add, el commit y el push
