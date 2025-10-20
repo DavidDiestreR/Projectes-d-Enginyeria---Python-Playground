@@ -17,8 +17,8 @@ conda init bash
 **Windows (Git Bash):**
 ```bash
 cd DIRECTORIO/DONDE/TENGAIS/EL/PROYECTO
-conda env create -f envs\environment.yml
-conda activate env
+conda env create -f envs/myenvironment.yml
+conda activate myenv
 ```
 
 ---
@@ -27,22 +27,23 @@ conda activate env
 
 - Actualizar el entorno
   ```bash
-  conda env update -f envs/tools/environment.yml --prune
+  conda env update -f envs/tools/myenvironment.yml --prune
   ```
 
 - Borrar el entorno:
   ```bash
-  conda env remove -n MolForge_env
+  conda deactivate
+  conda env remove -n myenv
   ```
 
 ---
 
 ## 📓 Ejecutar notebooks con el entorno Conda
 
-Activa primero tu entorno `env` y ejecuta:
+Activa primero tu entorno `myenv` y ejecuta:
 
 ```bash
-python -m ipykernel install --user --name env --display-name "Python (env)"
+python -m ipykernel install --user --name myenv --display-name "my first python environment"
 ```
 
 Una vez instalado el entorno, ejecuta:
@@ -50,14 +51,14 @@ Una vez instalado el entorno, ejecuta:
 jupyter lab --no-browser --ip=0.0.0.0
 ```
 
-> Abre la URL con token que imprime Jupyter en tu navegador de Windows (ultimo link de todos). Dentro de JupyterLab, selecciona el kernel **Python (env)** para ejecutar los notebooks con ese entorno.
+> Abre la URL con token que imprime Jupyter en tu navegador de Windows (ultimo link de todos). Dentro de JupyterLab, selecciona el kernel **my first python environment** para ejecutar los notebooks con ese entorno.
 
 ---
 
 ### 🚨 Limpieza si eliminas entornos
-Quitar kernel “zombi” después de borrar un entorno:
+Quitar kernel “zombi” antes de borrar un entorno:
 ```bash
 jupyter kernelspec list
-jupyter kernelspec uninstall env -y
+jupyter kernelspec uninstall myenv -y
 ```
 
