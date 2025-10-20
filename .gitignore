@@ -21,9 +21,6 @@ __pycache__/
 
 # --- Entornos / paquetes ---
 .venv/
-venv/
-env/
-envs/
 .env
 .conda/
 conda-meta/
