@@ -23,22 +23,7 @@ conda activate myenv
 
 ---
 
-## 🔄 Actualizar entornos
-
-- Actualizar el entorno
-  ```bash
-  conda env update -f envs/tools/myenvironment.yml --prune
-  ```
-
-- Borrar el entorno:
-  ```bash
-  conda deactivate
-  conda env remove -n myenv
-  ```
-
----
-
-## 📓 Ejecutar notebooks con el entorno Conda
+## 📓 Ejecutar notebooks con Jupyter (opcional de momento pero necesario si acabamos usando un repo de linux)
 
 Activa primero tu entorno `myenv` y ejecuta:
 
@@ -55,14 +40,8 @@ jupyter lab --no-browser --ip=0.0.0.0
 
 ---
 
-### 🚨 Limpieza si eliminas entornos
-Quitar kernel “zombi” antes de borrar un entorno:
-```bash
-jupyter kernelspec list
-jupyter kernelspec uninstall myenv -y
-```
+### 🐱 Haz tu primer git add -> git commit -> git push
 
-### Haz tu primer git add -> git commit -> git push
 Dentro del proyecto, solo una vez:
 ```bash
 git config user.name "Usuario_Github"
@@ -70,3 +49,27 @@ git config user.email "correo_usuario_github@empresa.com"
 ```
 
 Create una rama nueva desde Github y usando los comandos del documento de drive colocate en la rama y haz el add, el commit y el push
+
+---
+
+## 🔄 Actualizar entornos
+
+- Actualizar el entorno
+  ```bash
+  conda env update -f envs/tools/myenvironment.yml --prune
+  ```
+
+- Borrar el entorno:
+  ```bash
+  conda deactivate
+  conda env remove -n myenv
+  ```
+
+---
+
+### 🚨 Limpieza si eliminas entornos
+Quitar kernel “zombi” antes de borrar un entorno:
+```bash
+jupyter kernelspec list
+jupyter kernelspec uninstall myenv -y
+```
